@@ -585,3 +585,29 @@ footer {
     /* الفوتر في الموبايل */
     .footer-content { text-align: center; }
 }
+/* تنسيق حقوق المطور */
+.dev-credits {
+    font-size: 0.8rem; /* خط صغير وأنيق */
+    color: rgba(255, 255, 255, 0.4); /* لون أبيض خافت لعدم الإزعاج */
+    margin-top: 15px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    direction: ltr; /* لجعل الاسم الإنجليزي يظهر بشكل صحيح بجانب العربي */
+}
+
+.dev-credits a {
+    color: var(--secondary-color); /* لون النعناع المميز في موقعك */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dev-credits a:hover {
+    color: white; /* يتحول للأبيض عند اللمس */
+    text-shadow: 0 0 10px var(--secondary-color); /* توهج بسيط */
+    letter-spacing: 1px; /* تباعد الحروف قليلاً كحركة جمالية */
+}
