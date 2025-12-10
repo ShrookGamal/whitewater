@@ -1,8 +1,7 @@
-/* إعدادات عامة */
 :root {
-    --primary-color: #008080; /* تركواز */
-    --secondary-color: #20c997; /* أخضر نعناعي */
-    --accent-color: #ff6b6b; /* برتقالي محمر */
+    --primary-color: #008080; 
+    --secondary-color: #20c997; 
+    --accent-color: #ff6b6b; 
     --dark-text: #2d3436;
     --light-bg: #f8fbfb;
     --white: #ffffff;
@@ -176,7 +175,7 @@ header {
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 .hero {
-    height: 100vh; /* هذا يجعله يغطي طول الشاشة بالكامل 100% */
+    height: 100vh; 
     background: url('images/IMG-20251210-WA0004.jpg') no-repeat center center/cover;
     position: relative;
     display: flex;
@@ -240,12 +239,8 @@ header {
     color: var(--primary-color);
 }
 .btn-secondary:hover { background-color: #f0f0f0; }
-/* ========================
-   تنسيق السلايدر (ألوان وتنسيق جديد)
-   ======================== */
-
 .slider-section {
-    background-color: #f8fbfb; /* خلفية سماوي فاتح جداً جداً لتمييز القسم */
+    background-color: #f8fbfb; 
     padding: 60px 0;
 }
 
@@ -255,45 +250,41 @@ header {
 }
 
 .section-header h2 { 
-    color: var(--primary-color); /* استخدام لون البراند (التركواز) */
+    color: var(--primary-color); 
     margin-bottom: 10px; 
     font-size: 2.2rem; 
     font-weight: 800;
 }
 
-/* تعديل خاص لعنوان السلايدر إذا كنت تريدينه مميزاً */
 .slider-section .section-header h2 { 
     color: var(--primary-color); 
 }
 
-/* تعديل لون الوصف ليكون مقروءاً بدلاً من الرمادي الفاتح */
 .slider-section .section-header p { 
-    color: #555; /* رمادي غامق للقراءة */
+    color: #555; 
     font-size: 1.1rem;
 }
 
 .line { 
     width: 80px; 
     height: 4px; 
-    background: var(--secondary-color); /* الخط باللون الأخضر النعناعي */
+    background: var(--secondary-color); 
     margin: 10px auto; 
     border-radius: 2px;
 }
-
-/* حاوية السلايدر */
 .swiper {
     width: 100%;
     height: 500px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* ظل ناعم */
-    background-color: #fff; /* خلفية بيضاء خلف الصور في حالة اختلاف المقاسات */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+    background-color: #fff; 
     border: 1px solid #eee;
 }
 
 .swiper-slide {
     position: relative;
-    background: #fff; /* خلفية الشريحة بيضاء */
-    display: flex;             /* محاذاة الصورة في المنتصف */
+    background: #fff; 
+    display: flex;            
     justify-content: center;
     align-items: center;
 }
@@ -301,33 +292,30 @@ header {
 .swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* هام جداً: يعرض الصورة كاملة بدون زوم */
-    opacity: 1; /* جعل الصورة واضحة تماماً */
+    object-fit: contain; 
+    opacity: 1; 
 }
 
-/* النص فوق الصورة (Caption) */
 .slide-caption {
     position: absolute;
     bottom: 30px;
-    right: 30px; /* مكان النص */
-    background: rgba(0, 128, 128, 0.9); /* لون تركواز مع شفافية بسيطة */
+    right: 30px; 
+    background: rgba(0, 128, 128, 0.9); 
     color: white;
     padding: 12px 25px;
     border-radius: 50px;
     font-size: 1.1rem;
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border-bottom: 3px solid var(--secondary-color); /* لمسة جمالية خضراء */
+    border-bottom: 3px solid var(--secondary-color); 
 }
-
-/* تعديل للموبايل */
 @media (max-width: 768px) {
     .swiper {
-        height: 300px; /* تصغير الارتفاع للموبايل */
+        height: 300px; 
     }
     .slide-caption {
         right: 50%;
-        transform: translateX(50%); /* توسيط النص في الموبايل */
+        transform: translateX(50%); 
         bottom: 10px;
         width: 90%;
         text-align: center;
@@ -336,19 +324,15 @@ header {
 }
 .swiper-button-next, .swiper-button-prev {
     color: var(--white) !important;
-    background: transparent !important; /* إزالة الخلفية */
+    background: transparent !important; 
     width: auto;
     height: auto;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 2rem; /* تكبير السهم قليلاً */
+    font-size: 2rem; 
     font-weight: bold;
     text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
-
-/* ==================================
-   أقسام المحتوى (التركيز، الخدمات، إلخ)
-   ================================== */
 section { padding: 70px 0; }
 
 .focus-grid {
@@ -382,8 +366,6 @@ section { padding: 70px 0; }
     border: none; border-radius: 20px; cursor: pointer;
     font-family: 'Cairo', sans-serif;
 }
-
-/* الفيديوهات */
 .video-grid-separate {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -393,8 +375,6 @@ section { padding: 70px 0; }
 .video-card { background: white; padding: 15px; border-radius: 15px; box-shadow: var(--shadow); text-align: center; }
 .video-card video { width: 100%; border-radius: 10px; height: 250px; object-fit: cover; background: #000; }
 .video-card h3 { margin-top: 10px; font-size: 1.1rem; }
-
-/* المناطق */
 .areas { background: var(--primary-color); color: white; }
 .areas .section-header h2 { color: white; }
 .areas .section-header p { color: #ddd; }
@@ -404,20 +384,15 @@ section { padding: 70px 0; }
     background: rgba(255,255,255,0.15); padding: 8px 15px;
     border-radius: 20px; font-size: 1rem; border: 1px solid rgba(255,255,255,0.2);
 }
-
-/* ==================================
-   الفوتر (التصميم الأصلي)
-   ================================== */
 footer {
     background: #1a252f;
     color: #bdc3c7;
     padding-top: 60px;
-    /* إزالة text-align: center ليكون التنسيق مرناً */
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* تقسيم الأعمدة */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 40px;
     padding-bottom: 40px;
 }
@@ -470,19 +445,17 @@ footer {
     padding: 20px;
     border-top: 1px solid #34495e;
     font-size: 0.9rem;
-    background: #151e26; /* لون أغمق قليلاً للشريط السفلي */
+    background: #151e26;
 }
-
-/* تنسيق للموبايل لضمان ظهور الفوتر بشكل جيد */
 @media (max-width: 768px) {
     .footer-content {
-        text-align: center; /* توسيط الكلام في الموبايل */
+        text-align: center; 
     }
     .footer-col h3 {
-        display: inline-block; /* لضمان توسيط الخط تحت العنوان */
+        display: inline-block; 
     }
     .contact-info p {
-        justify-content: center; /* توسيط أيقونات الاتصال */
+        justify-content: center; 
     }
 }
 .mobile-menu-footer {
@@ -490,14 +463,8 @@ footer {
     text-align: center;
     border-top: 1px solid #eee;
     padding-top: 20px;
-    
-    /* هذا السطر الجديد سيرفع الجزء الخاص بالتواصل للأعلى */
     margin-bottom: 80px; 
 }
-
-/* ==================================
-   النوافذ المنبثقة (Modal) والأزرار العائمة
-   ================================== */
 .floating-btns {
     position: fixed; bottom: 20px; left: 20px;
     display: flex; flex-direction: column; gap: 10px; z-index: 900;
@@ -535,71 +502,51 @@ footer {
 .modal-btn:hover { border-color: var(--primary-color); background: white; color: var(--primary-color); }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-/* ==================================
-   التجاوب (Mobile Media Queries)
-   ================================== */
-/* ==================================
-   تعديلات الموبايل (أهم جزء)
-   ================================== */
 @media (max-width: 768px) {
-    /* إخفاء عناصر الكمبيوتر */
     .desktop-nav { display: none; }
     .call-btn-header { display: none; }
     .menu-toggle { display: flex; } 
-
-    /* تعديل الهيرو في الموبايل */
     .hero h1 { font-size: 1.8rem; margin-bottom: 15px; }
     .hero p { font-size: 1rem; padding: 0 10px; }
 
-    /* الشبكات تصبح عمود واحد */
     .focus-grid, .video-grid-separate { grid-template-columns: 1fr; }
-
-    /* === إصلاح السلايدر في الموبايل === */
     .swiper { 
-        height: 320px; /* ارتفاع مناسب للموبايل */
+        height: 320px; 
     } 
     
     .swiper-slide img {
-        object-fit: contain; /* الصورة تظهر كاملة */
+        object-fit: contain; 
     }
-
-    /* تنسيق الكلام داخل السلايدر للموبايل */
     .slide-caption { 
-        width: 95%; /* العرض يملأ الشاشة تقريباً */
+        width: 95%; 
         right: 50%; 
-        transform: translateX(50%); /* توسيط الكلام */
-        bottom: 10px; /* تقليل المسافة من الأسفل */
-        font-size: 0.85rem; /* تصغير الخط */
-        padding: 8px 15px; /* تقليل الحواف */
-        white-space: nowrap; /* منع الكلام من النزول لسطرين إذا أمكن */
+        transform: translateX(50%); 
+        bottom: 10px; 
+        font-size: 0.85rem; 
+        padding: 8px 15px; 
+        white-space: nowrap; 
         text-overflow: ellipsis;
         overflow: hidden;
     }
-
-    /* تصغير أسهم التقليب في الموبايل حتى لا تغطي الصورة */
     .swiper-button-next::after, .swiper-button-prev::after {
         font-size: 1.2rem; 
     }
-    
-    /* الفوتر في الموبايل */
     .footer-content { text-align: center; }
 }
-/* تنسيق حقوق المطور */
 .dev-credits {
-    font-size: 0.8rem; /* خط صغير وأنيق */
-    color: rgba(255, 255, 255, 0.4); /* لون أبيض خافت لعدم الإزعاج */
+    font-size: 0.8rem; 
+    color: rgba(255, 255, 255, 0.4); 
     margin-top: 15px;
     font-weight: normal;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    direction: ltr; /* لجعل الاسم الإنجليزي يظهر بشكل صحيح بجانب العربي */
+    direction: ltr; 
 }
 
 .dev-credits a {
-    color: var(--secondary-color); /* لون النعناع المميز في موقعك */
+    color: var(--secondary-color); 
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -607,7 +554,7 @@ footer {
 }
 
 .dev-credits a:hover {
-    color: white; /* يتحول للأبيض عند اللمس */
-    text-shadow: 0 0 10px var(--secondary-color); /* توهج بسيط */
-    letter-spacing: 1px; /* تباعد الحروف قليلاً كحركة جمالية */
+    color: white; 
+    text-shadow: 0 0 10px var(--secondary-color); 
+    letter-spacing: 1px; 
 }

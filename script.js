@@ -1,44 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // =============================
-    // برمجة قائمة الموبايل (Side Menu)
-    // =============================
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMenuBtn = document.querySelector('.close-menu-btn');
     const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    // فتح القائمة
-    if(mobileMenuBtn) {
+        if(mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.add('active');
         });
     }
-
-    // إغلاق القائمة
     if(closeMenuBtn) {
         closeMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
         });
     }
-
-    // إغلاق القائمة عند الضغط على أي رابط
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
         });
     });
-
-    // إغلاق القائمة عند الضغط خارجها
     window.addEventListener('click', (e) => {
         if (e.target === mobileMenu) {
             mobileMenu.classList.remove('active');
         }
     });
-
-    // =============================
-    // إعدادات السلايدر (Swiper)
-    // =============================
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 0, 
         centeredSlides: true,
@@ -57,17 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 });
-
-// =============================
-// وظائف النافذة المنبثقة (Popup)
-// =============================
-
 const modal = document.getElementById('contactModal');
 const modalTitle = document.getElementById('modalTitle');
 const btn1 = document.getElementById('option1');
 const btn2 = document.getElementById('option2');
-
-// أرقام التواصل
 const number1 = "0532472417";
 const number2 = "0509982956";
 
@@ -99,8 +76,6 @@ function openModal(type) {
 function closeModal() {
     modal.style.display = "none";
 }
-
-// إغلاق النافذة عند الضغط في الخارج
 window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
