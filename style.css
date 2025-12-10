@@ -176,7 +176,7 @@ header {
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 .hero {
-    height: 85vh;
+    height: 100vh; /* هذا يجعله يغطي طول الشاشة بالكامل 100% */
     background: url('images/IMG-20251210-WA0004.jpg') no-repeat center center/cover;
     position: relative;
     display: flex;
@@ -184,7 +184,7 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
-    padding-top: 60px;
+    padding-top: 0; 
 }
 
 .hero-overlay {
@@ -485,6 +485,15 @@ footer {
         justify-content: center; /* توسيط أيقونات الاتصال */
     }
 }
+.mobile-menu-footer {
+    margin-top: auto;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    
+    /* هذا السطر الجديد سيرفع الجزء الخاص بالتواصل للأعلى */
+    margin-bottom: 80px; 
+}
 
 /* ==================================
    النوافذ المنبثقة (Modal) والأزرار العائمة
@@ -530,14 +539,49 @@ footer {
 /* ==================================
    التجاوب (Mobile Media Queries)
    ================================== */
+/* ==================================
+   تعديلات الموبايل (أهم جزء)
+   ================================== */
 @media (max-width: 768px) {
-    .desktop-nav { display: none; } /* إخفاء قائمة الكمبيوتر */
-    .menu-toggle { display: flex; } /* إظهار زر الموبايل */
-    .call-btn-header { display: none; } /* إخفاء زر الاتصال في الهيدر */
+    /* إخفاء عناصر الكمبيوتر */
+    .desktop-nav { display: none; }
+    .call-btn-header { display: none; }
+    .menu-toggle { display: flex; } 
+
+    /* تعديل الهيرو في الموبايل */
+    .hero h1 { font-size: 1.8rem; margin-bottom: 15px; }
+    .hero p { font-size: 1rem; padding: 0 10px; }
+
+    /* الشبكات تصبح عمود واحد */
+    .focus-grid, .video-grid-separate { grid-template-columns: 1fr; }
+
+    /* === إصلاح السلايدر في الموبايل === */
+    .swiper { 
+        height: 320px; /* ارتفاع مناسب للموبايل */
+    } 
     
-    .hero h1 { font-size: 2rem; }
-    .focus-grid { grid-template-columns: 1fr; }
-    .video-grid-separate { grid-template-columns: 1fr; }
-    .swiper { height: 250px; } /* تصغير السلايدر للموبايل */
-    .slide-caption { width: 90%; text-align: center; right: 5%; bottom: 10px; font-size: 0.9rem; }
+    .swiper-slide img {
+        object-fit: contain; /* الصورة تظهر كاملة */
+    }
+
+    /* تنسيق الكلام داخل السلايدر للموبايل */
+    .slide-caption { 
+        width: 95%; /* العرض يملأ الشاشة تقريباً */
+        right: 50%; 
+        transform: translateX(50%); /* توسيط الكلام */
+        bottom: 10px; /* تقليل المسافة من الأسفل */
+        font-size: 0.85rem; /* تصغير الخط */
+        padding: 8px 15px; /* تقليل الحواف */
+        white-space: nowrap; /* منع الكلام من النزول لسطرين إذا أمكن */
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    /* تصغير أسهم التقليب في الموبايل حتى لا تغطي الصورة */
+    .swiper-button-next::after, .swiper-button-prev::after {
+        font-size: 1.2rem; 
+    }
+    
+    /* الفوتر في الموبايل */
+    .footer-content { text-align: center; }
 }
